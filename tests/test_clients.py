@@ -34,7 +34,7 @@ def test_eia_pages_until_total(monkeypatch):
     ]
     offsets = []
 
-    def fake_get(url, params):
+    def fake_get(url, params, **kwargs):
         offsets.append(params["offset"])
         return pages[len(offsets) - 1]
 

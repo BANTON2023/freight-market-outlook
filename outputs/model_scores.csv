@@ -1,0 +1,10 @@
+model,mape,mae,forecasts,series
+naive,7.2975,0.3395,31,diesel
+holt_winters,8.1481,0.3697,31,diesel
+seasonal_naive,13.5307,0.6152,31,diesel
+naive,0.9025,1.0328,31,TRUCKD11
+holt_winters,0.9495,1.0844,31,TRUCKD11
+seasonal_naive,1.1478,1.3097,31,TRUCKD11
+naive,0.7998,1.0978,31,TSIFRGHT
+holt_winters,0.8129,1.1146,31,TSIFRGHT
+seasonal_naive,0.9258,1.2704,31,TSIFRGHT

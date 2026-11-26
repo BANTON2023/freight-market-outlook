@@ -6,6 +6,16 @@ project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- EIA downloads asked for oldest-first sorting and a start date, which made the EIA
+  server time out (HTTP 504). Prices now come newest-first in one request and the
+  date filter is applied locally.
+
+### Added
+
+- First real data and forecast outputs (data to 2026-11-23).
+
 ## [0.1.0] - 2026-11-26
 
 ### Added
