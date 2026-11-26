@@ -14,6 +14,7 @@ def fuel_cost_per_mile(diesel_forecast: pd.DataFrame, mpg: float = config.SIJ_AV
     """Add SIJ fuel cost per mile (point, low, high) to a diesel price forecast."""
     out = diesel_forecast[["date", "forecast", "low", "high"]].copy()
     out = out.rename(columns={"forecast": "diesel_price", "low": "diesel_low", "high": "diesel_high"})
+    out[["diesel_price", "diesel_low", "diesel_high"]] = out[["diesel_price", "diesel_low", "diesel_high"]].round(3)
     out["mpg"] = mpg
     for col in ["price", "low", "high"]:
         source = "diesel_price" if col == "price" else f"diesel_{col}"
